@@ -10,7 +10,7 @@
 
 ## Overview
 
-This project visualizes CO2 emissions per capita for each country from 2000 to 2011 using Tableau. The goal is to provide an interactive view of global emissions trends and highlight regional differences.
+Using Tableau, this project visualizes CO2 emissions per capita for each country from 2000 to 2011. The goal is to provide an interactive view of global emissions trends and highlight regional differences.
 
 ## Data Source
 
@@ -30,7 +30,7 @@ This project visualizes CO2 emissions per capita for each country from 2000 to 2
 
 *   **Color Scheme:** Used a sequential color scheme to represent the range of CO2 emissions, with darker shades indicating higher emissions.
 *   **World Map:** Chosen to provide a clear geographical overview of emissions patterns.
-*   **Interactive Filters:** Year filter enables users to easily compare emissions across different years.
+*   **Interactive Filters:** The Year filter enables users to compare emissions across different years easily.
 
 ## Key Insights
 
@@ -40,6 +40,7 @@ This project visualizes CO2 emissions per capita for each country from 2000 to 2
 ## Tools Used
 
 *   Tableau
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 - [x] **Excel** - 
@@ -90,6 +91,8 @@ Key observations:
 ## Key Insights and Observations
 
 *   Both generations experienced growth in the job market from 2007 to 2013.
+
+[Download working file](Millenials_vs_BabyBoomers.xlsx)
 
 ## Tools Used
 
