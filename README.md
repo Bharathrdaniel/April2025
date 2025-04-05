@@ -1,3 +1,11 @@
+# Portfolio Projects
+## Following are my projects in SQL, R, Tableau & Excel: <br />
+
+*Kindly download these Excel files from this repository and view them in Microsoft Excel.*
+
+
+- [x] **Tableau** -
+
 # CO2 Emissions Analysis (2000-2011)
 
 ## Overview
@@ -33,6 +41,9 @@ This project visualizes CO2 emissions per capita for each country from 2000 to 2
 
 *   Tableau
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- [x] **Excel** - 
+
 # Analysis of Job Market Trends: Millennials vs. Baby Boomers (2007-2013)
 
 ## Overview
@@ -86,6 +97,8 @@ Key observations:
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+- [x] **SQL** - 
+
 # Car Dataset Analysis and Cleaning - BigQuery
 
 ## Overview
@@ -99,7 +112,7 @@ This project details the data exploration and cleaning steps performed on a car 
 
 ## Data Cleaning Steps
 
-The data cleaning process involved the following steps:
+The data-cleaning process involved the following steps:
 
 *   Handling missing values
 *   Correcting data inconsistencies
@@ -201,6 +214,8 @@ The detailed SQL queries can be found [employee_data_joins.sql](https://github.c
 *   Google BigQuery
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- [x] ** R Studio ** - 
 
 # R Sandbox Activity - Short
 
