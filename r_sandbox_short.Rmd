@@ -1,0 +1,40 @@
+---
+title: "R Sandbox Activity"
+output: html_document
+---
+
+## Overview
+
+This R Markdown file introduces basic R concepts.
+
+## Steps
+
+1.  **Install and Load tidyverse:**
+
+    ```
+    install.packages("tidyverse")
+    library(tidyverse)
+    ```
+
+2.  **View Data (Diamonds Dataset):**
+
+    ```
+    head(diamonds)
+    str(diamonds)
+    colnames(diamonds)
+    ```
+
+3.  **Clean Data:**
+
+    ```
+    rename(diamonds, carat_new = carat)
+    summarize(diamonds, mean_carat = mean(carat))
+    ```
+
+4.  **Visualize Data:**
+
+    ```
+    ggplot(data = diamonds, aes(x = carat, y = price)) + geom_point()
+    ggplot(data = diamonds, aes(x = carat, y = price, color = cut)) + geom_point()
+    ggplot(data = diamonds, aes(x = carat, y = price, color = cut)) + geom_point() + facet_wrap(~cut)
+    ```
