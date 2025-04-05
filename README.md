@@ -92,7 +92,7 @@ Key observations:
 
 *   Both generations experienced growth in the job market from 2007 to 2013.
 
-[Download working file](Millenials_vs_BabyBoomers.xlsx)
+[Download (Millenials_vs_BabyBoomers](Millenials_vs_BabyBoomers.xlsx)
 
 ## Tools Used
 
@@ -121,7 +121,7 @@ The data-cleaning process involved the following steps:
 *   Correcting data inconsistencies
 *   Ensuring data consistency
 
-See the detailed SQL queries used for these steps: [update_cars.sql](https://github.com/Bharathrdaniel/April2025/blob/main/update_cars.sql)
+See the detailed SQL queries used for these steps: [update_cars.sql](data_update_cars.sql)
 
 ## Tools Used
 
