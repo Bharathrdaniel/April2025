@@ -1,94 +1,85 @@
--- Preview first 100 rows
-SELECT * 
-FROM `bravi-cars-testing.cars.car_Info`
-LIMIT 100;
-
--- Check schema and data types
-SELECT column_name, data_type
-FROM `bravi-cars-testing.cars`.INFORMATION_SCHEMA.COLUMNS
-WHERE table_name = 'car_Info';
-
--- Replace missing prices with median price
-CREATE OR REPLACE TABLE `bravi-cars-testing.cars.car_Info` AS
+-- Check missing values and basic stats
 SELECT
-  COALESCE(price, 0) AS price,
-  COALESCE(mileage, 0) AS mileage,
-  COALESCE(year, EXTRACT(YEAR FROM CURRENT_DATE())) AS year,
-  -- Add other columns with similar COALESCE logic
+  COUNTIF(price IS NULL) AS missing_prices,
+  COUNTIF(horsepower IS NULL) AS missing_horsepower,
+  COUNTIF(num_of_doors IS NULL) AS missing_doors,
+  AVG(price) AS avg_price,
+  MIN(price) AS min_price,
+  MAX(price) AS max_price
 FROM `bravi-cars-testing.cars.car_Info`;
 
--- Clean text fields
-UPDATE `bravi-cars-testing.cars.car_Info`
-SET
-  body_type = UPPER(TRIM(body_type)),
-  fuel_type = INITCAP(TRIM(fuel_type)),
-  transmission = CASE 
-    WHEN LOWER(transmission) LIKE '%auto%' THEN 'Automatic'
-    WHEN LOWER(transmission) LIKE '%manual%' THEN 'Manual'
-    ELSE 'Other'
-  END
-WHERE TRUE;
-
-
--- Remove invalid entries
-DELETE FROM `bravi-cars-testing.cars.car_Info`
-WHERE 
-  year < 1900 OR year > EXTRACT(YEAR FROM CURRENT_DATE())
-  OR mileage < 0
-  OR price < 0;
-
---Create Cleaned Table
 CREATE OR REPLACE TABLE `bravi-cars-testing.cars.cleaned_car_info` AS
 SELECT
-  vin,
-  make,
-  model,
-  year,
-  mileage,
-  price,
-  -- Add calculated age column
-  EXTRACT(YEAR FROM CURRENT_DATE()) - year AS age,
-  body_type,
-  fuel_type,
-  transmission
+  -- Handle missing values
+  COALESCE(CAST(price AS INT64), 0) AS price,
+  COALESCE(CAST(horsepower AS INT64), 
+    (SELECT APPROX_QUANTILES(horsepower, 2)[OFFSET(1)] FROM `bravi-cars-testing.cars.car_Info`)) AS horsepower,
+  COALESCE(num_of_doors, 'unknown') AS num_of_doors,
+  
+  -- Standardize values
+  CASE 
+    WHEN LOWER(fuel_type) IN ('gas', 'gasoline') THEN 'Petrol'
+    ELSE INITCAP(fuel_type)
+  END AS fuel_type,
+  
+  UPPER(TRIM(body_style)) AS body_style,
+  
+  -- Validate numerical ranges
+  CASE
+    WHEN engine_size BETWEEN 1 AND 1000 THEN engine_size
+    ELSE NULL
+  END AS engine_size,
+  
+  -- Create combined efficiency metric
+  ROUND((city_mpg + highway_mpg)/2, 1) AS avg_mpg,
+  
+  -- Keep other columns
+  make, drive_wheels, wheel_base, curb_weight, compression_ratio
 FROM `bravi-cars-testing.cars.car_Info`
-WHERE
-  vin IS NOT NULL
-  AND make IS NOT NULL
-  AND model IS NOT NULL;
+WHERE 
+  -- Remove invalid records
+  price > 500 
+  AND horsepower BETWEEN 50 AND 1000
+  AND compression_ratio BETWEEN 7 AND 23;
 
---Average Price by Make
-SELECT 
-  make,
+
+SELECT
+  body_style,
+  COUNT(*) AS count,
   ROUND(AVG(price), 2) AS avg_price,
-  COUNT(*) AS count
+  ROUND(STDDEV(price), 2) AS price_stddev
 FROM `bravi-cars-testing.cars.cleaned_car_info`
-GROUP BY make
+GROUP BY body_style
 ORDER BY avg_price DESC;
 
---Mileage Distribution
-SELECT
-  FLOOR(mileage/10000)*10000 AS mileage_range,
-  COUNT(*) AS count
-FROM `bravi-cars-testing.cars.cleaned_car_info`
-GROUP BY mileage_range
-ORDER BY mileage_range;
 
---Fuel Type Analysis
 SELECT
   fuel_type,
-  ROUND(AVG(price), 2) AS avg_price,
-  ROUND(AVG(mileage), 2) AS avg_mileage,
+  AVG(avg_mpg) AS avg_efficiency,
+  AVG(horsepower) AS avg_horsepower,
   COUNT(*) AS count
 FROM `bravi-cars-testing.cars.cleaned_car_info`
-GROUP BY fuel_type;
+GROUP BY fuel_type
+HAVING count > 10
+ORDER BY avg_efficiency DESC;
 
--- Advanced Analysis (Vehicle Age vs Price
+
 SELECT
-  age,
-  ROUND(AVG(price), 2) AS avg_price,
-  ROUND(AVG(mileage), 2) AS avg_mileage
+  make,
+  ROUND(AVG(horsepower/curb_weight), 4) AS power_to_weight_ratio,
+  CORR(horsepower, price) AS hp_price_correlation
 FROM `bravi-cars-testing.cars.cleaned_car_info`
-GROUP BY age
-ORDER BY age;
+GROUP BY make
+HAVING COUNT(*) > 5
+ORDER BY power_to_weight_ratio DESC;
 
+
+CREATE MATERIALIZED VIEW `bravi-cars-testing.cars.vw_make_stats` AS
+SELECT
+  make,
+  COUNT(*) AS total_vehicles,
+  ROUND(AVG(price), 2) AS avg_price,
+  ROUND(AVG(avg_mpg), 1) AS avg_efficiency,
+  ROUND(AVG(horsepower), 1) AS avg_power
+FROM `bravi-cars-testing.cars.cleaned_car_info`
+GROUP BY make;
