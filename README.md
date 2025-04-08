@@ -66,8 +66,8 @@ The following queries were used in this analysis:
 #### 2. Hotel Bookings Data Visualization
 - **Overview:** Visualizes hotel bookings data using ggplot2 to understand booking trends and customer behavior.
 - **Tools Used:** R, ggplot2
-  - **Hotel bookings segment - Bar Chart:**
-    ![Hotel Bookings Visualization](Visuals/bar_chart_hotel.pdf)
+  - **Hotelsegment** ![Hotel_segment](Visuals/hotel_segment.png)
+ 
 
 ---
 
@@ -93,11 +93,12 @@ The following queries were used in this analysis:
 #### CO2 Emissions Analysis (2000-2011)
 - **Overview:** Visualizes CO2 emissions per capita for each country from 2000 to 2011 using Tableau dashboards.
 - **Dashboard Link:** [CO2 Emissions Dashboard](https://public.tableau.com/views/CO_2emissionspercapitaforeachcountryfrom2000-2011_17410183466300/Sheet1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+- ![snapshot](Visuals/Co2_emission_vizulisatiom.png)
 
 #### Happiness Score Analysis
 - **Overview:** Analyzes global happiness scores using Tableau dashboards to identify trends across regions.
 - **Tools Used:** Tableau
-  - **Visualization:** ![Happiness Score Visualization](Visuals/Tableau_Happiness_score.png)[](Visuals/Co2_emission_vizulisatiom.png)
+  - **Visualization:** ![Happiness Score Visualization](Visuals/Tableau_Happiness_score.png)
 
 ---
 
