@@ -1,6 +1,142 @@
 # Portfolio Projects
 ## Following are my projects in SQL, R, Tableau & Excel: <br />
 
+txtxtxtxtxtx
+
+Filtered SQL Data Visualization
+Filename: 
+Details: Data cleaning graphs.
+
+London Bicycle Query - Big Data Cloud SQL
+Filename: 
+Details: Data cleaning graphs.
+
+
+xtxtxtxtx
+
+
+# Portfolio Projects
+
+## Overview
+
+This repository contains a collection of data analysis projects showcasing my expertise in SQL, R, Tableau, and Excel. Each project is accompanied by supporting files, visualizations, and detailed documentation.
+
+---
+
+## Projects
+
+### **SQL**
+
+#### 1. Car Dataset Analysis and Cleaning - BigQuery
+- **Overview:** Data exploration and cleaning steps performed on a car dataset in Google BigQuery to prepare it for further analysis.
+- **Tools Used:** Google BigQuery
+- **Files:**
+  - `update_cars.sql`
+  - **Visualization:** ![Car Dataset Analysis Visualization](April2025/Visuals/Sql-Google-data-training.png)
+
+#### 2. NYC Trees Dataset Analysis - BigQuery
+- **Overview:** Compares average tree diameters across census years (1995, 2005, and 2015) using SQL queries in BigQuery.
+- **Tools Used:** Google BigQuery
+- **Files:**
+  - `nyc_trees_analysis.sql`
+  - **Visualization:** ![NYC Trees Dataset Visualization](April2025/Visuals/sql_data_filtering.png)
+
+#### 3. US County Natality Data Analysis (2016-2018) - BigQuery
+- **Overview:** Analyzes county-level birth trends using SQL's `ORDER BY` clause in BigQuery.
+- **Tools Used:** Google BigQuery
+- **Files:**
+  - `births_analysis.sql`
+  - **Visualization:** ![County Natality Data Visualization](April2025/Visuals/cloud_bigdata-sql-query-london_bicycles.png)
+
+#### 4. Employee Data Analysis with JOINs - BigQuery
+- **Overview:** Explores different types of SQL JOINs (INNER, LEFT, RIGHT, FULL OUTER) using employee and department data.
+- **Tools Used:** Google BigQuery
+- **Files:**
+  - `employee_data_joins.sql`
+  - **Visualization:** ![Employee Data Visualization](April2025/Visuals/Sql_Joins.png)
+
+---
+
+### **R Studio**
+
+#### 1. R Sandbox Activity: Penguin Data Exploration
+- **Overview:** Analyzes the relationship between penguin species, flipper length, and body mass using ggplot2.
+- **Tools Used:** R, tidyverse, palmerpenguins package
+- **Files:**
+  - `penguin_analysis.Rmd`
+  - **Visualization:** ![Penguin Data Visualization](April2025/Visuals/palmerpenguins.pdf)
+
+#### 2. Hotel Bookings Data Visualization
+- **Overview:** Visualizes hotel bookings data using ggplot2 to understand booking trends and customer behavior.
+- **Tools Used:** R, ggplot2
+- **Files:**
+  - `hotel_bookings_analysis.Rmd`
+  - **Visualization:** ![Hotel Bookings Visualization](April2025/Visuals/bar_chart_hotel.pdf)
+
+---
+
+### **Tableau**
+
+#### CO2 Emissions Analysis (2000-2011)
+- **Overview:** Visualizes CO2 emissions per capita for each country from 2000 to 2011 using Tableau dashboards.
+- **Tools Used:** Tableau
+- **Dashboard Link:** [CO2 Emissions Dashboard](https://public.tableau.com/views/CO_2emissionspercapitaforeachcountryfrom2000-2011_17410183466300/Sheet1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+- **Visualization:** ![CO2 Emissions Visualization](April2025/Visuals/Co2_emission_vizulisatiom.png)
+
+#### Happiness Score Analysis
+- **Overview:** Analyzes global happiness scores using Tableau dashboards to identify trends across regions.
+- **Tools Used:** Tableau
+- **Files:**
+  - Tableau workbook (.twb)
+  - Supporting files for R, SQL, Tableau
+  - **Visualization:** ![Happiness Score Visualization](April2025/Visuals/Tableau_Happiness_score.png)
+
+---
+
+### Excel
+
+#### Job Market Trends: Millennials vs. Baby Boomers (2007–2013)
+- **Overview:** Examines job market trends across generations using pivot tables and charts in Excel.
+- **Tools Used:** Microsoft Excel
+- **Files:**
+  - `Millenials_vs_BabyBoomers.xlsx`
+  - Supporting files for Excel charts and pivot tables
+  - **Visualization:** ![Excel Job Market Trends Visualization](April2025/Visuals/excel_chart.png)
+
+---
+
+## Contact
+
+**LinkedIn Profile**  
+[Bharath Ravi Kumar](https://uk.linkedin.com/in/bharathr)  
+
+**Email**  
+bharathrdaniel@gmail.com  
+
+---
+## Repository Structure
+
+### Visualizations Folder (`April2025/Visuals`)
+This folder contains all project-related visualizations:
+1. `Co2_emission_vizulisatiom.png` – CO2 Emissions Dashboard visualization.
+2. `Employee_data.png` – Employee data analysis visualization.
+3. `Excel_data_extract.png` – Excel chart and pivot table visualization.
+4. `Sql-Google-data-training.png` – SQL car dataset visualization.
+5. `Sql_Joins.png` – SQL JOINs visualization.
+6. `Tableau_Happiness_score.png` – Happiness score analysis visualization.
+7. `Visulaization_with_ggplot2.png` – ggplot2 visualization for hotel bookings data.
+8. `bar_chart_hotel.pdf` – Hotel bookings bar chart visualization.
+9. `cloud_bigdata-sql-query-london_bicycles.png` – SQL natality data visualization.
+10. `excel_chart.png` – Excel job market trends visualization.
+11. `palmerpenguins.pdf` – Penguin data exploration visualization.
+12. `sql_data_filtering.png` – NYC Trees dataset filtering visualization.
+
+---
+
+This README provides a comprehensive overview of your projects while integrating the visualizations stored in the repository (`April2025/Visuals`). Let me know if you need further adjustments!
+
+xtxtxtxtxtxtxtxtxtxtxt
+
 *Kindly download these Excel files from this repository and view them in Microsoft Excel.*
 
 
@@ -220,17 +356,33 @@ The detailed SQL queries can be found [employee_data_joins.sql](https://github.c
 
 - [x] ** R Studio ** - 
 
-# R Sandbox Activity - Short
+# R Sandbox Activity 
 
-A brief introduction to R with a focus on viewing, cleaning, and visualizing data using the `tidyverse` package. Open `r_sandbox_short.Rmd` in RStudio to run the code.
+# Penguin Data Exploration in R
 
-## Key Concepts
+## Overview
 
-*   Installing and loading R packages
-*   Viewing data with `head()`, `str()`, `glimpse()`, and `colnames()`
-*   Cleaning data with `rename()` and `summarize()`
-*   Visualizing data with `ggplot2`
-*   Documenting code with R Markdown
+This project provides an essential R-based exploration of the penguin dataset. It includes data loading, structural examination, and visualization to identify relationships between penguin characteristics.
+
+## Key Steps
+
+1.  Install `tidyverse` and the `palmerpenguins` package.
+2.  Load the libraries and dataset.
+3.  Explore data structure using `head()`, `str()`, and `glimpse()`.
+4.  Visualize the relationship between each species's flipper length and body mass.
+5.  Run Knit (ctrl+shift+k).
+
+## Tools Used
+
+*   R
+*   RStudio
+*   tidyverse package
+*   palmerpenguins package
+
+## Code
+
+The analysis is performed in `penguin_analysis.Rmd`. Run this file in RStudio. The analysis removes missing data.
+
 
 ## Contact
 
