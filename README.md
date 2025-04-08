@@ -32,8 +32,8 @@ This repository contains a collection of data analysis projects showcasing my ex
 - **Tools Used:** Google BigQuery
 - **Files:**
   - `update_cars.sql`
-  - **Visualization:** ![Car Dataset Analysis Visualization](April2025/Visuals/Sql-Google-data-training.png)
-  - Visuals/Co2_emission_vizulisatiom.png
+  - **Visualization:** ![Car Dataset Analysis Visualization](Visuals/Co2_emission_vizulisatiom.png)
+  - 
   - ![gog gog](https://github.com/Bharathrdaniel/April2025/blob/2f67af189c2129d13c2d6302e5e510b0e7800ae4/Visuals/Co2_emission_vizulisatiom.png)
   - ![co2 emission](Visuals/Co2_emission_vizulisatiom.png)
  
