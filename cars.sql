@@ -42,6 +42,7 @@ WHERE
   AND horsepower BETWEEN 50 AND 1000
   AND compression_ratio BETWEEN 7 AND 23;
 
+--Price Distribution by Body Style:
 
 SELECT
   body_style,
@@ -52,7 +53,7 @@ FROM `bravi-cars-testing.cars.cleaned_car_info`
 GROUP BY body_style
 ORDER BY avg_price DESC;
 
-
+-- Fuel Efficiency Analysis:
 SELECT
   fuel_type,
   AVG(avg_mpg) AS avg_efficiency,
@@ -63,6 +64,7 @@ GROUP BY fuel_type
 HAVING count > 10
 ORDER BY avg_efficiency DESC;
 
+-- Power-to-Weight Ratio Analysis:
 
 SELECT
   make,
@@ -72,14 +74,3 @@ FROM `bravi-cars-testing.cars.cleaned_car_info`
 GROUP BY make
 HAVING COUNT(*) > 5
 ORDER BY power_to_weight_ratio DESC;
-
-
-CREATE MATERIALIZED VIEW `bravi-cars-testing.cars.vw_make_stats` AS
-SELECT
-  make,
-  COUNT(*) AS total_vehicles,
-  ROUND(AVG(price), 2) AS avg_price,
-  ROUND(AVG(avg_mpg), 1) AS avg_efficiency,
-  ROUND(AVG(horsepower), 1) AS avg_power
-FROM `bravi-cars-testing.cars.cleaned_car_info`
-GROUP BY make;
