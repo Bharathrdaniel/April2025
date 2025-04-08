@@ -1,0 +1,141 @@
+#Here’s a step-by-step R # Studio task plan for working with the Palmer Penguins dataset, based on what i have  learnt from the Google Data Analytics course. 
+#This includes data exploration, cleaning, and visualization using tidyverse and ggplot2.
+
+
+# Install and load necessary packages
+install.packages("palmerpenguins")
+library(palmerpenguins)
+library(tidyverse)
+
+# Load the penguins dataset
+data("penguins")
+
+# View the first few rows of the dataset
+head(penguins)
+
+# Check the structure of the dataset
+str(penguins)
+
+# Get a summary of the dataset
+summary(penguins)
+
+
+
+# Count missing values in each column
+colSums(is.na(penguins))
+
+
+
+# Remove rows with missing values
+penguins_clean <- penguins %>%
+  drop_na()
+
+# Verify that missing values have been removed
+colSums(is.na(penguins_clean))
+
+
+# Count the number of penguins in each species
+penguins_clean %>%
+  count(species) %>%
+  ggplot(aes(x = species, y = n, fill = species)) +
+  geom_col() +
+  geom_label(aes(label = n)) +
+  labs(title = "Count of Penguin Species", x = "Species", y = "Count") +
+  theme_minimal()
+
+
+# Calculate mean body mass and flipper length by species
+penguins_clean %>%
+  group_by(species) %>%
+  summarize(
+    mean_body_mass = mean(body_mass_g),
+    mean_flipper_length = mean(flipper_length_mm)
+  )
+
+## Scatter Plot: Flipper Length vs Body Mass
+
+ggplot(data = penguins_clean, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point(size = 3, alpha = 0.7) +
+  labs(
+    title = "Flipper Length vs Body Mass",
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)"
+  ) +
+  theme_minimal()
+
+
+## Add Regression Line
+
+ggplot(data = penguins_clean, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(
+    title = "Flipper Length vs Body Mass with Regression Line",
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)"
+  ) +
+  theme_minimal()
+
+
+## Facet Plot: Split by Sex
+
+ggplot(data = penguins_clean, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point(size = 3, alpha = 0.7) +
+  facet_wrap(~sex) +
+  labs(
+    title = "Flipper Length vs Body Mass by Sex",
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)"
+  ) +
+  theme_minimal()
+
+## Box Plot: Body Mass by Species
+
+ggplot(data = penguins_clean, aes(x = species, y = body_mass_g, fill = species)) +
+  geom_boxplot() +
+  labs(
+    title = "Body Mass Distribution by Species",
+    x = "Species",
+    y = "Body Mass (g)"
+  ) +
+  theme_minimal()
+
+
+## Correlation Matrix
+install.packages(GGally)
+
+library(GGally)
+
+penguins_clean %>%
+  select(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) %>%
+  ggpairs(aes(color = penguins_clean$species))
+
+
+## Save Cleaned Dataset
+write.csv(penguins_clean, "penguins_clean.csv", row.names = FALSE)
+
+
+---
+
+## Conclusion
+
+In this report:
+- We explored the Palmer Penguins dataset.
+- Cleaned the data by removing rows with missing values.
+- Performed exploratory data analysis to understand key features.
+- Created visualizations to explore relationships between variables.
+
+The cleaned dataset has been saved as `penguins_clean.csv` for further use.
+
+---
+
+## References
+
+- Palmer Penguins Dataset: [palmerpenguins package](https://allisonhorst.github.io/palmerpenguins/)
+- R Documentation: [CRAN palmerpenguins](https://cran.r-project.org/web/packages/palmerpenguins/readme/README.html)
+
+#Summary of Tasks:
+#Loaded and explored the Palmer Penguins dataset.
+#Cleaned the data by removing rows with missing values.
+#Performed exploratory data analysis to understand key features.
+#Created visualizations to explore relationships between variables.
