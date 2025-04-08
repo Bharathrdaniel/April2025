@@ -66,7 +66,8 @@ The following queries were used in this analysis:
 #### 2. Hotel Bookings Data Visualization
 - **Overview:** Visualizes hotel bookings data using ggplot2 to understand booking trends and customer behavior.
 - **Tools Used:** R, ggplot2
-  - **Hotel bookings segment - Bar Chart:** ![Hotel Bookings Visualization](Visuals/bar_chart_hotel.pdf)
+  - **Hotel bookings segment - Bar Chart:**
+    ![Hotel Bookings Visualization](Visuals/bar_chart_hotel.pdf)
 
 ---
 
@@ -96,7 +97,7 @@ The following queries were used in this analysis:
 #### Happiness Score Analysis
 - **Overview:** Analyzes global happiness scores using Tableau dashboards to identify trends across regions.
 - **Tools Used:** Tableau
-  - **Visualization:** ![Happiness Score Visualization](Visuals/Tableau_Happiness_score.png)
+  - **Visualization:** ![Happiness Score Visualization](Visuals/Tableau_Happiness_score.png)[](Visuals/Co2_emission_vizulisatiom.png)
 
 ---
 
