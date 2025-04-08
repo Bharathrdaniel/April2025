@@ -63,12 +63,6 @@ WHERE
 -- Previewing row to be deleted (BigQuery Sandbox)
 SELECT * FROM `bravi-cars-testing.cars.car_Info` WHERE compression_ratio = 70;
 
--- Ensuring Consistency in drive_wheels
-SELECT
-  DISTINCT drive_wheels
-FROM
-  `bravi-cars-testing.cars.car_Info`;
-
 -- Checking Length of drive_wheels entries
 SELECT
   DISTINCT drive_wheels,
