@@ -56,8 +56,8 @@ The following queries were used in this analysis:
 - **Overview:** Analyze the relationship between penguin species, flipper length, and body mass using ggplot2.
 - **Tools Used:** R, tidyverse, palmerpenguins package
 - **Files:**
-  - ![`penguin_analysis.Rmd`](https://github.com/Bharathrdaniel/April2025/blob/ffa3180a5edbe9d0ceace4ba68588c70657fec69/refresh_data_penguins.Rmd)
-  - **Visual** ![Penguin Data Visualization](Visuals/Visulaization_with_ggplot2.png)
+  - [`penguin_analysis.rmd`](https://github.com/Bharathrdaniel/April2025/blob/ffa3180a5edbe9d0ceace4ba68588c70657fec69/refresh_data_penguins.Rmd)
+  - **Visual** ![](Visuals/Visulaization_with_ggplot2.png)
  
     ![ggplot](Visuals/rstudio_regression_line.png)
  
