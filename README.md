@@ -148,9 +148,8 @@ Key observations:
 
 ## Contact
 
-**LinkedIn Profile**  
-![Bharath Ravi]([https://uk.linkedin.com/in/bharathr](https://www.linkedin.com/in/bharath-ravi-714469143?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bja8zO8JITmyFUsKh1CHJOw%3D%3D))  
-
+**LinkedIn Profile**
+[HERE](https://www.linkedin.com/in/bharath-ravi-714469143?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_jobs%3BhmDq%2BnkJRtGWMlCWw8wrPQ%3D%3D)
 **Email**  
 bharathrdaniel@gmail.com
 
