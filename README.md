@@ -149,7 +149,7 @@ Key observations:
 ## Contact
 
 **LinkedIn Profile**
-[HERE](https://www.linkedin.com/in/bharath-ravi-714469143?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_jobs%3BhmDq%2BnkJRtGWMlCWw8wrPQ%3D%3D)
+[HERE](https://www.linkedin.com/in/bharath-ravi-714469143?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_jobs%3BhmDq%2BnkJRtGWMlCWw8wrPQ%3D%3D) <br/>
 **Email**  
 bharathrdaniel@gmail.com
 
