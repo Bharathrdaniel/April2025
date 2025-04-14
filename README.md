@@ -2,7 +2,12 @@
 
 ## Overview
 
-This repository contains a collection of data analysis projects showcasing my expertise in SQL, R, Tableau, and Excel. Each project is accompanied by supporting files, visualizations, and detailed documentation.
+This repository contains a collection of data analysis projects showcasing my SQL, R, Tableau, and Excel expertise. Each project is accompanied by supporting files, visualizations, and detailed documentation.
+
+---
+
+Contact -> [LinkedIn Profile](https://www.linkedin.com/in/bharath-ravi-714469143?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_jobs%3BhmDq%2BnkJRtGWMlCWw8wrPQ%3D%3D) <br/>
+Email -> bharathrdaniel@gmail.com
 
 ---
 
