@@ -1,4 +1,4 @@
-# Portfolio Projects
+# Portfolio Projects | BHARATH R
 
 ## Overview
 
@@ -7,7 +7,7 @@ This repository contains a collection of data analysis projects showcasing my SQ
 ---
 
 Contact -> [LinkedIn Profile](https://www.linkedin.com/in/bharath-ravi-714469143?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_jobs%3BhmDq%2BnkJRtGWMlCWw8wrPQ%3D%3D) <br/>
-Email -> bharathrdaniel@gmail.com
+Email -> [bharathrdaniel@gmail.com](bharathrdaniel@gmail.com)
 
 ---
 
