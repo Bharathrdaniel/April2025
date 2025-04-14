@@ -1,4 +1,4 @@
-# BHARATH | April Projects
+# Bharath Ravi
 
 ## Overview
 
